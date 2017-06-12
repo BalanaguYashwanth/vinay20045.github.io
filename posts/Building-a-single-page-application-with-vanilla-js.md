@@ -1,9 +1,9 @@
 Building a single page application with vanilla js
 --------------------------------------------------
 
-Often times I've come across _this framework vs that framework_ debate. Many times as an observer, some times as a participant and occasionally as the person who _\*cough\*_  started the debate _\*cough\*_. Most frequent arguments in these debates are around the _comparitively easy ways to do stuff_ or the _lesser code needs to be written_ points. What I don't see people talking about is writing vanilla js and structuring your project better instead of using a framework. What comes across as a shock to me is that many developers don't know anything more outside of their favorite frameworks and are scared to write plain js code. If you decide to code for a living, how can you not know the building blocks of the plugin you use??
+Often times I've come across _this framework vs that framework_ debate. Many times as an observer, some times as a participant and occasionally as the person who _\*cough\*_  started the debate _\*cough\*_. Most frequent arguments in these debates are around the _comparatively easy ways to do stuff_ or the _lesser code needs to be written_ points. What I don't see people talking about is writing vanilla js and structuring your project better instead of using a framework. What comes across as a shock to me is that many developers don't know anything more outside of their favorite frameworks and are scared to write plain js code. If you decide to code for a living, how can you not know the building blocks of the plug-in you use??
 
-A lot of good folks have talked about this in the past. Some of my favorite reads are [zero framework manifesto][1] and [Look ma, no frameworks][2]. Many of these frameworks have a wonderful way of marketing themselves by presenting their top features or percieved benefits of usage on their websites or through developer's blogs, however, I don't see as many folks showing ways of building SPA with vanilla js. I therefore decided to refactor my personal website as a SPA without using any framework. I hope that this post will serve as a good first step when you are building an app on your own without using any frameworks. All code referenced here is available at [vinay20045.github.io repo][3] and [this website][4] itself acts as a live demo.
+A lot of good folks have talked about this in the past. Some of my favorite reads are [zero framework manifesto][1] and [Look ma, no frameworks][2]. Many of these frameworks have a wonderful way of marketing themselves by presenting their top features or perceived benefits of usage on their websites or through developer's blogs, however, I don't see as many folks showing ways of building SPA with vanilla js. I therefore decided to re-factor my personal website as a SPA without using any framework. I hope that this post will serve as a good first step when you are building an app on your own without using any frameworks. All code referenced here is available at [vinay20045.github.io repo][3] and [this website][4] itself acts as a live demo.
 
 **Design**   
 Prior to refactoring my website was a typical blog written in PHP. Every page request used to do a round trip to a server for all html content and assets, it had a management console etc. During refactoring some of my considerations were...
@@ -17,7 +17,7 @@ with these things in mind, the high level design of the blog looks like this...
 ![askvinay.com SPA design](uploads/vanilla-js-spa-design.png)
 
 **Basic Structure**   
-One of the primary things that you should be looking at while developing any application is the origanization of the code. This includes everything right from your folder structure and naming conventions to declarations and definitions. A lot of developers I've seen argue over 2 line breaks vs 1 line break but are ok with having business logic in the views or templates. Anyways, once you do this for one project, it sort of acts like a boilerplate and will be very easy to replicate and extend for your future projects. 
+One of the primary things that you should be looking at while developing any application is the organization of the code. This includes everything right from your folder structure and naming conventions to declarations and definitions. A lot of developers I've seen argue over 2 line breaks vs 1 line break but are ok with having business logic in the views or templates. Anyways, once you do this for one project, it sort of acts like a boilerplate and will be very easy to replicate and extend for your future projects. 
 
 The basic structure of the blog application looks like this...
 ```
@@ -128,7 +128,7 @@ controllers.home_page = function(data, params){
 ```
 
 **Dissecting templates**   
-Templates hold HTML markup for the actual page content. It helps in reusability when you can have functions generating the HTML you want based on some context passed. All functionality for the templates have to be provided by the controller invoking it by using data binding and event registration techniques. The only exception that I've allowed are the hrefs. 
+Templates hold HTML markup for the actual page content. It helps in re-usability when you can have functions generating the HTML you want based on some context passed. All functionality for the templates have to be provided by the controller invoking it by using data binding and event registration techniques. The only exception that I've allowed are the hrefs. 
 
 The template for the hello section of the home page is...
 ```
@@ -206,7 +206,7 @@ I haven't gotten a chance to do a comparative bench marking but at first glance 
 
 There you go, wasn't that easy?? If you're still not convinced, fire up a browser, clone my [repo][3], make the necessary changes (config, templates etc.) and play around. I'm pretty sure that not only will you come around to start building your own js applications, framework free; you will also be contributing more libraries to the open source world... The world needs more people who share :)
 
-I've tested the code on all modern browsers (except IE) and it seems to work without any glitches. Watch out for JS api compatability while building your own applications (For ex, I've used back ticks which are not compatible with older browsers). Let me know if you find any bugs or issues with the code.
+I've tested the code on all modern browsers (except IE) and it seems to work without any glitches. Watch out for JS api compatibility while building your own applications (For ex, I've used back ticks which are not compatible with older browsers). Let me know if you find any bugs or issues with the code.
 
 --   
 Vinay Kumar NP   
