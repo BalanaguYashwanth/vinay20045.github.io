@@ -2,7 +2,7 @@ templates.hello_text = function(data){
     var content = `
         <div id="hello_text">
             <h2>Hello...</h2>
-            <img src="assets/images/Vinay.jpg" align="left" style="width:70px;">
+            <img src="assets/images/profile_pic.jpg" align="left" style="width:70px;">
             <p>
                 Thank you for visiting my blog. I am Vinay Kumar NP. I am a passionate techie and love the kick that building stuff gives. This is where I express my take on things. I currently reside in Bangalore, India. I started out as a student entrepreneur. I architect web apps, write code and love food.
             </p>
